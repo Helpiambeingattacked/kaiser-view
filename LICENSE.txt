@@ -1,0 +1,17 @@
+Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)
+
+You are free to:
+- View, fork, and clone this repository
+- Submit pull requests or suggestions
+
+You may NOT:
+- Use this work for commercial purposes
+- Copy, modify, or redistribute this code outside of GitHub without explicit permission
+- Reupload or sell any part of this code, modified or unmodified
+
+This project is made public for improvement and education only.
+
+To request extended use or licensing, contact:
+https://github.com/Helpiambeingattacked
+
+© 2025 Helpiambeingattacked. All Rights Reserved.
