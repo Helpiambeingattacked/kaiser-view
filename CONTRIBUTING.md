@@ -14,6 +14,18 @@ Some improvement ideas:
 - Drag & drop media loader
 - Startup playlist
 
+# 👋 Contributing Guide
+
+Thanks for your interest! To contribute:
+
+1. Fork the repo
+2. Create a feature branch
+3. Submit a pull request
+4. Be respectful, clear, and constructive
+
+Please don’t overwrite the main branch. Use PRs only.
+All ideas are welcome!
+
 If unsure, open an Issue before coding. Pull requests are reviewed manually.
 
 — Helpiambeingattacked
