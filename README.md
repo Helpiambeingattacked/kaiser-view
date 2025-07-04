@@ -31,7 +31,8 @@ To request special usage rights or a license extension, contact me via GitHub:
 👉 [https://github.com/Helpiambeingattacked](https://github.com/Helpiambeingattacked)
 
 ---
-✅ Contributing
+✅ Contributing:
+
 Want to improve it?
 
 Open issues with bugs or ideas
