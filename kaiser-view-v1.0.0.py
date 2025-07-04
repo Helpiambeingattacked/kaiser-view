@@ -8,17 +8,17 @@ from PyQt5.QtWebEngineWidgets import QWebEngineView
 from PyQt5.QtGui import QPixmap
 from PIL import Image
 from enum import Enum
+from pathlib import Path
 
 # Logging setup
 logging.basicConfig(filename='error.log', level=logging.ERROR)
 
 # Constants
-BASE_DIR = os.path.join(os.path.expanduser("~"), "Desktop", "MyImageFolder")
-CONFIG_PATH = os.path.join(os.path.expanduser("~"), "Desktop", "config.json")
+CONFIG_PATH = Path.home() / ".kaiser-view" / "config.json"
+BASE_DIR = Path.home() / ".kaiser-view" / "media"
 DEFAULT_CONFIG = {"favorites": [], "stretch_mode": False, "playback_speed": 100, "loop_video": True}
-
-if not os.path.exists(BASE_DIR):
-    os.makedirs(BASE_DIR)
+BASE_DIR.mkdir(parents=True, exist_ok=True)
+CONFIG_PATH.parent.mkdir(parents=True, exist_ok=True)
 
 class StretchMode(Enum):
     DISABLED = 0
@@ -29,7 +29,7 @@ def load_config():
     config = DEFAULT_CONFIG.copy()
     if os.path.exists(CONFIG_PATH):
         try:
-            with open(CONFIG_PATH, "r") as file:
+            with CONFIG_PATH.open("r") as file:
                 user_config = json.load(file)
             config.update(user_config)
         except json.JSONDecodeError as e:
@@ -38,7 +38,7 @@ def load_config():
 
 def save_config(config):
     try:
-        with open(CONFIG_PATH, "w") as file:
+        with CONFIG_PATH.open("w") as file:
             json.dump(config, file, indent=4)
     except Exception as e:
         logging.error(f"Failed to save configuration: {e}")
